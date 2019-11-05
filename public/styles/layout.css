@@ -23,3 +23,22 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.name {
+  position: relative;
+  margin-top: 0;
+  bottom: 40px;
+  color: white;
+}
+
+#container {
+  position: static;
+  height: 400px;
+  width: 90%;
+  display: table-cell;
+  background-color: #d16c00;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+
+

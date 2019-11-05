@@ -1,0 +1,51 @@
+body {
+  font-family: source sans pro, sans-serif; 
+  background-color: #d16c00;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+nav {
+  font-family: bungee, sans-serif;
+  position: fixed;
+  top: 0px;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1 ;
+  z-index: 2;
+}
+
+span {
+  color:white;
+  margin: 1.5em;
+}
+
+#navbar-title {
+  font-size: 50px;
+  position: absolute;
+  float: left;
+  top: -30px;
+  bottom: 10px;
+  font-size: 45px;
+  margin-left: 0.8em;
+}
+
+#new-tweet-title {
+  position: relative;
+  float: right;
+  font-family: source sans pro, sans-serif;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.profile-holder {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  top: 120px;
+}
+
+
+

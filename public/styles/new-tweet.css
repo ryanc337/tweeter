@@ -1,0 +1,55 @@
+.new-tweet {
+ background-color: blanchedalmond;
+ padding-bottom: 15px;
+ padding-top: 5px;
+ margin-top: 10px;
+}
+
+form {
+  position: relative;
+  left: 65px;
+  text-align: center;
+}
+
+
+textarea {
+  position: relative;
+  bottom: 20px;
+  border-bottom: 4px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  left: 35px;
+  background-color: blanchedalmond;
+  font-size: 20px;
+  resize: none;
+  font-family: bungee;
+  outline: none;
+}
+
+input {
+  position: relative;
+  right: 290px;
+  top: 10px;
+  background-color: blue;
+  font-family: bungee, sans-serif;
+  color: white;
+}
+
+.counter {
+  position: relative;
+  right: 120px;
+  color: black;
+  font-family: bungee;
+  margin: 0;
+  top: 10px;
+}
+
+#compose-tweet {
+  position: relative;
+  bottom: 20px;
+  right: 53px;
+  font-size: 1em;
+  text-align: center;
+}
+
