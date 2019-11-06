@@ -3,12 +3,15 @@ $(document).ready(function() {
   const $textArea = $(".new-tweet form textarea.input");
   const $counter = $(".new-tweet form span.counter");
   
-  $textArea.on("keydown", (function() {
+  $textArea.on("keyup", (function() {
     const $this = $(this);
-    if ($this.val().length <= 140) {
-      $counter.text(($this.val().length));
-    } else if ($this.val().length > 140) {
-      $counter.text(0 - (($this.val().length) - 140));
+    if ((140 - ($this.val().length) >= 0)) {
+      $counter.css("color", "black");
+      $counter.text(140 - ($this.val().length));
+    } else {
+      $counter.css("color", "red");
+      $counter.text(140 - ($this.val().length));
     }
+     
   }))
 });
