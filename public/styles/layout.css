@@ -32,10 +32,8 @@ body {
 }
 
 #container {
-  position: static;
   height: 400px;
   width: 90%;
-  display: table-cell;
   background-color: #d16c00;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }

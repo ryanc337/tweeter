@@ -1,36 +1,34 @@
 .new-tweet {
- background-color: blanchedalmond;
- padding-bottom: 15px;
- padding-top: 5px;
- margin-top: 10px;
+  background-color: blanchedalmond;
+  padding-bottom: 100%;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: center;
 }
 
 form {
-  position: relative;
-  left: 65px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
-
 textarea {
-  position: relative;
-  bottom: 20px;
   border-bottom: 4px solid black;
   border-top: none;
-  border-left: none;
   border-right: none;
-  left: 35px;
-  background-color: blanchedalmond;
-  font-size: 20px;
-  resize: none;
+  border-left: none;
   font-family: bungee;
+  font-size: 20px;
+  background-color: blanchedalmond;
   outline: none;
+  resize: none;
 }
 
 input {
-  position: relative;
-  right: 290px;
-  top: 10px;
+  margin-right: auto;
+  margin-top: 8px;
   background-color: blue;
   font-family: bungee, sans-serif;
   color: white;
@@ -38,18 +36,67 @@ input {
 
 .counter {
   position: relative;
-  right: 120px;
+  bottom: 40px;
   color: black;
   font-family: bungee;
-  margin: 0;
-  top: 10px;
+  align-self: flex-end;
+  margin-top: auto;
 }
 
-#compose-tweet {
-  position: relative;
-  bottom: 20px;
-  right: 53px;
-  font-size: 1em;
-  text-align: center;
+
+article {
+  border: 4px solid black;
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
 }
+
+article:hover {
+  box-shadow: 10px 10px;
+}
+
+.icon-holder img {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+.icon-holder span a {
+  color:rgb(96, 213, 255);
+  float:right;
+  margin-top: 17px;
+  margin-right: 10px;
+}
+
+.display-name {
+  color: black;
+  position: relative;
+  margin-top: 0;
+  bottom: 30px;
+  margin-left: 0;
+}
+
+.posted-tweet {
+  margin: 0 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet {
+  border-bottom: 2px solid black;
+  padding-bottom: 2%;
+  margin: 0 2%;
+  margin-top: 1%;
+}
+
+.icons {
+  margin-top: 2%;
+  color: #4056A1;
+}
+
+.time {
+  margin-top: 1.5%;
+}
+
+
 

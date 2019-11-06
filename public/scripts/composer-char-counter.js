@@ -6,7 +6,7 @@ $(document).ready(function() {
   $textArea.on("keydown", (function() {
     const $this = $(this);
     if ($this.val().length <= 140) {
-      $counter.text($this.val().length);
+      $counter.text(($this.val().length));
     } else if ($this.val().length > 140) {
       $counter.text(0 - (($this.val().length) - 140));
     }
