@@ -1,32 +1,5 @@
 // import { create } from "domain";
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-
 function createTweetElement(i) {
   const markUp = ` <article>
     <div class="icon-holder">
@@ -44,12 +17,8 @@ function createTweetElement(i) {
         </div>
       </div>
     </article> `;
-    return markUp;
+  return markUp;
 }
-
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
 
 const renderTweets = function(tweets) {
   // loops through tweets
@@ -59,10 +28,52 @@ const renderTweets = function(tweets) {
     $('#tweet-container').append($tweet);
   }
 };
-renderTweets(data);
 
-// const $tweet = createTweetElement(tweetData);
+$("document").ready(function() {
+  // POST TWEET
+  $("form").submit((event) => {
+    event.preventDefault();
+    if ($("form").serialize() === "text=") {
+      alert("Cannot Post empty tweet");
+      } else if ($("form").serialize().length - 5 > 140) {
+        alert("Cannot Post Tweet over 140 characters");
+      } else {
+        $.ajax({
+          type: "POST",
+          url: "/tweets/",
+          data: $("form").serialize(),
+        })
+          .done((data) => {
+            $("#tweet-container").empty()
+            loadTweets();
+            console.log("sucess");
+          })
+          .fail((err) => {
+            console.log(err);
+          }); 
+      }
+  });
 
-// // Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-// $('#tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+
+  // GET TWEETS 
+  function loadTweets() {
+    $.ajax("/tweets/", { method: "GET" })
+    .then((data) => {
+      renderTweets(data);
+    })
+  }
+
+loadTweets();
+});
+
+
+
+// $(function() {
+//   const $button = $('#load-more-posts');
+//   $button.on('click', function () {
+//     console.log('Button clicked, performing ajax call...');
+//     $.ajax('more-posts.html', { method: 'GET' })
+//     .then(function (morePostsHtml) {
+//       console.log('Success: ', morePostsHtml);
+//       $button.replaceWith(morePostsHtml);
+//     });
