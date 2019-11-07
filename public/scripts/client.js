@@ -1,7 +1,7 @@
 // import { create } from "domain";
 
 function createTweetElement(i) {
-  const markUp = ` <article>
+  const markUp = `<article>
     <div class="icon-holder">
       <img src=${i.user.avatars}>
         <span class="display-name">${i.user.name}</span>
@@ -16,10 +16,10 @@ function createTweetElement(i) {
           <i class="fas fa-flag"></i>
         </div>
       </div>
-    </article> `;
+    </article>`;
   return markUp;
 }
-
+$()
 const renderTweets = function(tweets) {
   // loops through tweets
   let $tweet = undefined;
@@ -32,6 +32,7 @@ const renderTweets = function(tweets) {
 $("document").ready(function() {
   // POST TWEET
   $("form").submit((event) => {
+    console.log($("form"));
     event.preventDefault();
     if ($("form").serialize() === "text=") {
       alert("Cannot Post empty tweet");
