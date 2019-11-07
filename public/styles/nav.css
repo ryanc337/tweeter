@@ -10,7 +10,7 @@ nav {
   top: 0px;
   height: 120px;
   width: 100%;
-  background-color: #4056A1 ;
+  background-color: #4056A1;
   z-index: 2;
 }
 
@@ -33,6 +33,7 @@ span {
   position: relative;
   float: right;
   font-family: source sans pro, sans-serif;
+  margin-bottom: 0;
 }
 
 strong {
@@ -46,6 +47,25 @@ strong {
   text-align: center;
   top: 130px;
 }
+
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+#down-arrow {
+  position: relative;
+  color: red;
+  margin-top: 75px;
+  float: right;
+  left: 140px;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  padding: 10px;
+  cursor:pointer;
+}
+
 
 
 

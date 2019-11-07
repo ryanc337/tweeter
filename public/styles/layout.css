@@ -1,4 +1,4 @@
-/*
+/* /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
@@ -29,6 +29,7 @@ body {
   margin-top: 0;
   bottom: 40px;
   color: white;
+
 }
 
 #container {
@@ -37,6 +38,4 @@ body {
   background-color: #d16c00;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
-
-
 

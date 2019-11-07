@@ -12,6 +12,5 @@ $(document).ready(function() {
       $counter.css("color", "red");
       $counter.text(140 - ($this.val().length));
     }
-     
   }))
 });

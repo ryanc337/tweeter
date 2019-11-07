@@ -9,6 +9,7 @@
 }
 
 form {
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -104,5 +105,28 @@ article:hover .icon-holder span a {
   margin-top: 1.5%;
 }
 
+.hide {
+display: none;
+}
 
+.error-message {
+  text-align: center;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2%;
+  border: 4px solid red;
+}
 
+.error-message i {
+  color: red;
+}
+
+.error-message span {
+  color: red;
+  font-weight: 300;
+}
+
+#space {
+  margin-bottom: 3%;
+}
