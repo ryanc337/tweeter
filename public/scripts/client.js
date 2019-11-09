@@ -4,7 +4,7 @@ const escaped =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 function createTweetElement(i) {
   const markup = `<article>
@@ -43,49 +43,48 @@ $("document").ready(function() {
     console.log($("form"));
     event.preventDefault();
     if ($("form").serialize() === "text=") {
-      $(".error").html("<span>You Cannot Tweet Nothing!</span>")
+      $(".error").html("<span>You Cannot Tweet Nothing!</span>");
       $(".error-message").show(100);
-      } 
-      if ($("form").serialize().length - 5 > 140) {
-        $(".error").html("<span>This Tweet is too Long, You're not that interesting!</span>");
-        $(".error-message").show(100);
-      } else {
-        $.ajax({
-          type: "POST",
-          url: "/tweets/",
-          data: $("form").serialize(),
+    }
+    if ($("form").serialize().length - 5 > 140) {
+      $(".error").html("<span>This Tweet is too Long!");
+      $(".error-message").show(100);
+    } else {
+      $.ajax({
+        type: "POST",
+        url: "/tweets/",
+        data: $("form").serialize(),
+      })
+        .done((data) => {
+          $("#tweet-container").empty();
+          loadTweets();
+          $(".error-message").hide();
         })
-          .done((data) => {
-            $("#tweet-container").empty()
-            loadTweets();
-            $(".error-message").hide();
-          })
-          .fail((err) => {
-            console.log(err);
-          }); 
-      }
+        .fail((err) => {
+          console.log(err);
+        });
+    }
+
   });
 
-  // GET TWEETS 
+  // GET TWEETS
   function loadTweets() {
     $.ajax("/tweets/", { method: "GET" })
-    .then((data) => {
-      renderTweets(data);
-    })
+      .then((data) => {
+        renderTweets(data);
+      });
   }
 
-loadTweets();
-$("#down-arrow").click(() => { 
-  if ($("form").is(":visible")) {
-    $("form").slideUp("slow", () => {
+  loadTweets();
+  $("#down-arrow").click(() => {
+    if ($("form").is(":visible")) {
+      $("form").slideUp("slow", () => {
       //animation complete;
-    })
-  } else {
-    $("form").slideDown("slow", () => {
+      });
+    } else {
+      $("form").slideDown("slow", () => {
       //animation complete;
-    })
-  }
+      });
+    }
+  });
 });
-
-
-})
