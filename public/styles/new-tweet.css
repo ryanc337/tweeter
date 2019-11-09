@@ -35,11 +35,6 @@ article:hover .icon-holder span a {
   margin-right: 10px;
 }
 
-.icon-holder span a {
-  color: blanchedalmond;
-}
-
-
 .display-name {
   color: black;
   position: relative;
@@ -132,6 +127,12 @@ display: none;
     margin-right: 5%;
     padding: 2%;
     border: 4px solid red;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-holder span a {
+    color: blanchedalmond;
   }
 
 }
@@ -188,6 +189,10 @@ display: none;
 
   .dp {
     margin-top: 40px;
+  }
+
+  .icon-holder span a {
+    color: #f4f1ec;
   }
 
 }

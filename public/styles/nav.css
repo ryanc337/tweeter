@@ -55,6 +55,7 @@ strong {
     width: 100%;
     z-index: 2;
     background-color: none;
+    padding: 0 0.5%;
   }
 
   body {

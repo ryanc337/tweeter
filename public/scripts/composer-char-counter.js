@@ -13,4 +13,5 @@ $(document).ready(function() {
       $counter.text(140 - ($this.val().length));
     }
   }))
+
 });

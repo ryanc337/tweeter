@@ -15,7 +15,7 @@ function createTweetElement(i) {
               </div>
               <p class="tweet">${escaped(i.content["text"])}</p>
                 <div class="posted-tweet">
-                  <p class="time">${Math.round((i.created_at / (3.6e+6 * 24)))} days ago</p>
+                  <p class="time">${new Date(i.created_at).toLocaleTimeString("en-US")}</p>
                   <div class="icons">
                     <i class="fas fa-heart"></i>
                     <i class="fas fa-retweet"></i>
@@ -25,7 +25,7 @@ function createTweetElement(i) {
               </article>`;
   return markup;
 }
-$()
+
 const renderTweets = function(tweets) {
   // loops through tweets
   let $tweet = undefined;
@@ -36,13 +36,15 @@ const renderTweets = function(tweets) {
 };
 
 $("document").ready(function() {
+  $(".error-message").hide();
+  $("form").hide();
   // POST TWEET
   $("form").submit((event) => {
     console.log($("form"));
     event.preventDefault();
     if ($("form").serialize() === "text=") {
       $(".error").html("<span>You Cannot Tweet Nothing!</span>")
-      $(".error-message").show();
+      $(".error-message").show(100);
       } 
       if ($("form").serialize().length - 5 > 140) {
         $(".error").html("<span>This Tweet is too Long, You're not that interesting!</span>");
@@ -85,5 +87,5 @@ $("#down-arrow").click(() => {
   }
 });
 
-$(".error-message").hide();
+
 })
