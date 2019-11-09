@@ -6,9 +6,9 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
+  /* font-family: sans-serif; */ /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  /* -webkit-text-size-adjust: 100%; */ /* 2 */
 }
 
 /**
@@ -40,7 +40,7 @@ menu,
 nav,
 section,
 summary { /* 1 */
-  display: block;
+  /* display: block; */
 }
 
 /**

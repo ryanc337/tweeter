@@ -43,11 +43,11 @@ $("document").ready(function() {
     if ($("form").serialize() === "text=") {
       $(".error").html("<span>You Cannot Tweet Nothing!</span>")
       $(".error-message").show();
-      } else if ($("form").serialize().length - 5 > 140) {
-        $(".error").html("<span>This Tweet is too Long, You're not that intersting!</span>");
+      } 
+      if ($("form").serialize().length - 5 > 140) {
+        $(".error").html("<span>This Tweet is too Long, You're not that interesting!</span>");
         $(".error-message").show(100);
       } else {
-        $(".error-message").hide();
         $.ajax({
           type: "POST",
           url: "/tweets/",
@@ -55,16 +55,14 @@ $("document").ready(function() {
         })
           .done((data) => {
             $("#tweet-container").empty()
-
             loadTweets();
-            console.log("sucess");
+            $(".error-message").hide();
           })
           .fail((err) => {
             console.log(err);
           }); 
       }
   });
-
 
   // GET TWEETS 
   function loadTweets() {
@@ -89,15 +87,3 @@ $("#down-arrow").click(() => {
 
 $(".error-message").hide();
 })
-
-
-
-// $(function() {
-//   const $button = $('#load-more-posts');
-//   $button.on('click', function () {
-//     console.log('Button clicked, performing ajax call...');
-//     $.ajax('more-posts.html', { method: 'GET' })
-//     .then(function (morePostsHtml) {
-//       console.log('Success: ', morePostsHtml);
-//       $button.replaceWith(morePostsHtml);
-//     });

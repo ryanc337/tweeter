@@ -8,34 +8,70 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+
 }
 
-/*
- * Global layout stuff
- */
+/* 
+ * Global layout stuff */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  align-items: center;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.name {
-  position: relative;
-  margin-top: 0;
-  bottom: 40px;
-  color: white;
 
+
+@media only screen and (max-width: 768px) {
+  .name {
+    margin-top: 0;
+    color: white;
+    margin-left: 15%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .profile-holder {
+    margin-top: 120px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-#container {
-  height: 400px;
-  width: 90%;
-  background-color: #d16c00;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-}
+@media only screen and (min-width: 769px) {
+  .name {
+    margin-top: 0;
+    color: white;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .profile-holder {
+    margin-top: 18%;
+    margin-left: 10%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background-color: #d16c00;
+  }
 
+}

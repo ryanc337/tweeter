@@ -1,18 +1,4 @@
-body {
-  font-family: source sans pro, sans-serif; 
-  background-color: #d16c00;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-}
 
-nav {
-  font-family: bungee, sans-serif;
-  position: fixed;
-  top: 0px;
-  height: 120px;
-  width: 100%;
-  background-color: #4056A1;
-  z-index: 2;
-}
 
 span {
   color:white;
@@ -40,13 +26,6 @@ strong {
   font-weight: 600;
 }
 
-.profile-holder {
-  position: relative;
-  height: 400px;
-  width: 100%;
-  text-align: center;
-  top: 130px;
-}
 
 @keyframes bounce { 
   0% { transform: translateY(0); }
@@ -63,9 +42,40 @@ strong {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   padding: 10px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 
+@media only screen and (max-width: 768px) {
+  nav {
+    font-family: bungee, sans-serif;
+    position: fixed;
+    top: 0px;
+    height: 120px;
+    width: 100%;
+    z-index: 2;
+    background-color: none;
+  }
 
+  body {
+    font-family: source sans pro, sans-serif;
+    background-color: #d16c00;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+}
 
+@media only screen and (min-width: 769px) {
+  nav {
+    font-family: bungee, sans-serif;
+    position: fixed;
+    top: 0px;
+    height: 120px;
+    width: 100%;
+    z-index: 2;
+    background-color: blue;
+    }
+
+    body {
+      font-family: source sans pro, sans-serif;
+    } 
+}

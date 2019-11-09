@@ -1,32 +1,3 @@
-.new-tweet {
-  background-color: blanchedalmond;
-  padding-bottom: 100%;
-}
-
-.container-1 {
-  display: flex;
-  justify-content: center;
-}
-
-form {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-textarea {
-  border-bottom: 4px solid black;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  font-family: bungee;
-  font-size: 20px;
-  background-color: blanchedalmond;
-  outline: none;
-  resize: none;
-}
-
 input {
   margin-right: auto;
   margin-top: 8px;
@@ -36,14 +7,9 @@ input {
 } 
 
 .counter {
-  position: relative;
-  bottom: 40px;
   color: black;
   font-family: bungee;
-  align-self: flex-end;
-  margin-top: auto;
 }
-
 
 article {
   border: 4px solid black;
@@ -57,7 +23,6 @@ article:hover {
   box-shadow: 10px 10px;
 }
 
-
 .icon-holder img {
   height: 50px;
   width: 50px;
@@ -67,7 +32,6 @@ article:hover {
 article:hover .icon-holder span a {
   color:rgb(96, 213, 255);
   float:right;
-  margin-top: 17px;
   margin-right: 10px;
 }
 
@@ -75,18 +39,15 @@ article:hover .icon-holder span a {
   color: blanchedalmond;
 }
 
+
 .display-name {
   color: black;
   position: relative;
-  margin-top: 0;
   bottom: 30px;
-  margin-left: 0;
 }
 
 .posted-tweet {
   margin: 0 2%;
-  display: flex;
-  justify-content: space-between;
 }
 
 .tweet {
@@ -97,8 +58,12 @@ article:hover .icon-holder span a {
 }
 
 .icons {
+  position: relative;
   margin-top: 2%;
   color: #4056A1;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 45px;
 }
 
 .time {
@@ -109,15 +74,6 @@ article:hover .icon-holder span a {
 display: none;
 }
 
-.error-message {
-  text-align: center;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 2%;
-  border: 4px solid red;
-}
-
 .error-message i {
   color: red;
 }
@@ -125,8 +81,113 @@ display: none;
 .error-message span {
   color: red;
   font-weight: 300;
+  font-size: 16px;
 }
 
 #space {
   margin-bottom: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+  textarea {
+    border-bottom: 4px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-family: bungee;
+    font-size: 20px;
+    background-color: blanchedalmond;
+    outline: none;
+    resize: none;
+  }
+
+  .new-tweet {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-1 {
+    align-self: center;
+    display: flex; 
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin: 0 5%;
+  }
+
+  .counter {
+    align-self: flex-end;
+    margin-top: 0;
+    position: relative;
+    bottom: 30px;
+  }
+
+  .error-message {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2%;
+    border: 4px solid red;
+  }
+
+}
+
+@media only screen and (min-width: 769px) {
+  .new-tweet {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: 15%;
+    max-width: 700px;
+  }
+
+  .container-1 {
+    align-self: center;
+    display: flex; 
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin: 0 5%;
+  }
+
+  .counter {
+    align-self: flex-end;
+    margin-top: 0;
+    position: relative;
+    bottom: 30px;
+  }
+
+  .error-message {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    border: 4px solid red;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  textarea {
+    border-bottom: 4px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-family: bungee;
+    background-color:  #f4f1ec;
+    font-size: 20px;
+    outline: none;
+    resize: none;
+  }
+
+  .dp {
+    margin-top: 40px;
+  }
+
 }
