@@ -1,5 +1,5 @@
 // import { create } from "domain";
-
+// Prevent Cross Site Scripting
 const escaped =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));

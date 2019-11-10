@@ -15,3 +15,8 @@ This repository was initially starter code which has been forked from the Lighth
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Desktop Version of Tweeter"](https://github.com/ryanc337/tweeter/blob/master/docs/Desktop.png?raw=true)
+!["Mobile Version of Tweeter"](https://github.com/ryanc337/tweeter/blob/master/docs/mobile.png?raw=true)
