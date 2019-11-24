@@ -29,8 +29,9 @@ function createTweetElement(i) {
 const renderTweets = function(tweets) {
   // loops through tweets
   let $tweet = undefined;
-  for (const i of tweets) {
-    $tweet = createTweetElement(i);
+  console.log(tweets);
+  for (let i = tweets.length - 1; i >= 0; i--) {
+    $tweet = createTweetElement(tweets[i]);
     $('#tweet-container').append($tweet);
   }
 };
@@ -56,6 +57,7 @@ $("document").ready(function() {
         data: $("form").serialize(),
       })
         .done((data) => {
+          $(".input").val("")
           $("#tweet-container").empty();
           loadTweets();
           $(".error-message").hide();
