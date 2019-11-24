@@ -50,6 +50,7 @@ article:hover .icon-holder span a {
   padding-bottom: 2%;
   margin: 0 2%;
   margin-top: 1%;
+  text-overflow: auto;
 }
 
 .icons {

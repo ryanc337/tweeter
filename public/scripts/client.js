@@ -14,7 +14,7 @@ function createTweetElement(i) {
               </div>
               <p class="tweet">${escaped(i.content["text"])}</p>
                 <div class="posted-tweet">
-                  <p class="time">${moment().fromNow()}</p>
+                  <p class="time">${moment(i.created_at).fromNow()}</p>
                   <div class="icons">
                     <i class="fas fa-heart"></i>
                     <i class="fas fa-retweet"></i>
