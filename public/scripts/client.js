@@ -1,4 +1,3 @@
-// import { create } from "domain";
 // Prevent Cross Site Scripting
 const escaped =  function(str) {
   let div = document.createElement('div');
@@ -15,7 +14,7 @@ function createTweetElement(i) {
               </div>
               <p class="tweet">${escaped(i.content["text"])}</p>
                 <div class="posted-tweet">
-                  <p class="time">${new Date(i.created_at).toLocaleTimeString("en-US")}</p>
+                  <p class="time">${moment().fromNow()}</p>
                   <div class="icons">
                     <i class="fas fa-heart"></i>
                     <i class="fas fa-retweet"></i>
@@ -25,7 +24,7 @@ function createTweetElement(i) {
               </article>`;
   return markup;
 }
-
+// new Date(i.created_at).toLocaleTimeString("en-US")
 const renderTweets = function(tweets) {
   // loops through tweets
   let $tweet = undefined;
@@ -57,7 +56,7 @@ $("document").ready(function() {
         data: $("form").serialize(),
       })
         .done((data) => {
-          $(".input").val("")
+          $(".input").val("");
           $("#tweet-container").empty();
           loadTweets();
           $(".error-message").hide();
@@ -86,6 +85,7 @@ $("document").ready(function() {
     } else {
       $("form").slideDown("slow", () => {
       //animation complete;
+      $(".input").focus();
       });
     }
   });
