@@ -15,6 +15,9 @@ This repository was initially starter code which has been forked from the Lighth
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- md5
+- chance
 
 ## Screenshots
 
